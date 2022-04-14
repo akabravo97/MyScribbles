@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Scribbles</string>
+    <string name="main_activity_header_text">Scribbles!!</string>
+</resources>

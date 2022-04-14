@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scribble_fragment_nav">
+    <fragment
+        android:id="@+id/scribble_fragment_nav"
+        android:name="com.example.myscribbles.view.scribble.ScribbleFragment"
+        android:label="Scribble"
+        tools:layout="@layout/scribble_fragment">
+        <action
+            android:id="@+id/action_scribbleFragment_to_createEntryFragment"
+            app:destination="@id/create_entry_fragment_nav"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <argument
+            android:name="isDBUpdated"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_scribble_fragment_nav_to_viewScribbleFragment2"
+            app:destination="@id/viewScribbleFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/create_entry_fragment_nav"
+        android:name="com.example.myscribbles.view.scribble.CreateEntryFragment"
+        android:label="Entry"
+        tools:layout="@layout/create_entry_layout" >
+        <action
+            android:id="@+id/action_create_entry_fragment_nav_to_scribble_fragment_nav"
+            app:destination="@id/scribble_fragment_nav"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/calender_fragment_nav"
+        android:name="com.example.myscribbles.view.calender.CalenderFragment"
+        android:label="Calender"
+        tools:layout="@layout/calender_fragment" />
+    <fragment
+        android:id="@+id/settings_fragment_nav"
+        android:name="com.example.myscribbles.view.more.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/setting_fragment" />
+    <fragment
+        android:id="@+id/viewScribbleFragment"
+        android:name="com.example.myscribbles.view.viewScribble.ViewScribbleFragment"
+        android:label="view_scribble_fragment"
+        tools:layout="@layout/view_scribble_fragment" >
+        <argument
+            android:name="entryId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

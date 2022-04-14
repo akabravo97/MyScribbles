@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myscribbles.view.scribble.CreateEntryFragment">
+
+    <TextView
+        android:id="@+id/create_entry_date_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="#8BC34A"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/create_entry_year_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textColor="#aefcc8"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_entry_date_month" />
+
+    <ImageView
+        android:id="@+id/create_entry_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/image_button_background"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/create_entry_year_date"
+        app:layout_constraintStart_toEndOf="@+id/create_entry_date_month"
+        app:layout_constraintTop_toTopOf="@+id/create_entry_date_month"
+        app:layout_constraintVertical_bias="0.71"
+        app:srcCompat="@drawable/ic_baseline_calendar" />
+
+    <TextView
+        android:id="@+id/create_entry_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/image_button_background"
+        android:elevation="10dp"
+        android:text="TextView"
+        android:textColor="#99f945"
+        app:layout_constraintEnd_toStartOf="@+id/create_entry_time_picker"
+        app:layout_constraintTop_toTopOf="@+id/create_entry_time_picker" />
+
+    <ImageView
+        android:id="@+id/create_entry_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/image_button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm" />
+
+    <EditText
+        android:id="@+id/create_entry_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:hint="Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_entry_year_date" />
+
+    <EditText
+        android:id="@+id/create_entry_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:hint="Write here"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/create_entry_save_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_entry_title" />
+
+    <ImageButton
+        android:id="@+id/create_entry_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_check"
+        app:layout_constraintBottom_toBottomOf="@+id/create_entry_location_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/create_entry_location_button" />
+
+    <ImageView
+        android:id="@+id/create_entry_location_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/ic_baseline_add_location_alt"
+        app:layout_constraintBottom_toBottomOf="@+id/create_entry_add_image_button"
+        app:layout_constraintStart_toEndOf="@+id/create_entry_add_image_button"
+        app:layout_constraintTop_toTopOf="@+id/create_entry_add_image_button" />
+
+    <ImageButton
+        android:id="@+id/create_entry_add_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_baseline_add_photo_alternate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
